@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<LINK rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}"/>
+<LINK rel="stylesheet" type="text/css" href="../static/css/mystyle.css"
+th:href="@{css/mystyle.css}"/>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<DIV class="col-md-6 col-sm-6 col-xs-12">
+<DIV class="panel panel-info spacer">
+<DIV class="panel-heading">Confirmation</DIV>
+<DIV class="panel-body">
+</DIV>
+<DIV th:object="${produit}">
+<DIV class="form-group">
+<LABEL class="control-label">ID</LABEL>
+<LABEL class="control-label" th:text="*{idProduit}"></LABEL>
+</DIV>
+<DIV class="form-group">
+<LABEL class="control-label">Designation</LABEL>
+<LABEL class="control-label" th:text="*{designation}"></LABEL>
+</DIV>
+<DIV class="form-group">
+<LABEL class="control-label">Prix</LABEL>
+<LABEL class="control-label" th:text="*{prix}"></LABEL>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+
+
+
+</body>
+</html>

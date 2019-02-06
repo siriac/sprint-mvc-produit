@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"><LINK rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}"/>
+<LINK rel="stylesheet" type="text/css" href="../static/css/mystyle.css"
+th:href="@{css/mystyle.css}"/>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<DIV class="col-md-6 col-sm-6 col-xs-12">
+<FORM th:action="saveProduit" method="post">
+<DIV th:object="${produit}">
+<DIV class="form-group">
+<LABEL class="control-label">Designation</LABEL>
+<INPUT class="form-control" type="text" name="designation" th:value="*{designation}"/>
+<SPAN class="error" th:errors="*{designation}"></SPAN>
+</DIV>
+<DIV class="form-group">
+<LABEL class="control-label">Prix</LABEL>
+<INPUT class="form-control" type="text" name="prix" th:value="*{prix}"/>
+<SPAN  class="error" th:errors="*{prix}"></SPAN>
+</DIV>
+<DIV>
+<INPUT class="btn btn-primary" type="submit" value="Save"/>
+</DIV>
+</DIV>
+</FORM>
+</DIV>
+</body>
+</html>

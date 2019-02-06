@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+<LINK rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}"/>
+<LINK rel="stylesheet" type="text/css" href="../static/css/mystyle.css"
+th:href="@{css/mystyle.css}"/>
+
+</head>
+<body>
+<DIV class="container spacer">
+<FORM action="chercher?page=0" method="GET">
+<LABEL>Mot cle:</LABEL>
+<INPUT type="text" name="motcle"/>
+<INPUT type="submit" value="chercher"/>
+</FORM>
+</DIV>
+<DIV class="container">
+<table class="table table-striped">
+<THEAD>
+<TR>
+<th>ID</th><th>DES</th><th>PRIX</th>
+</TR>
+</THEAD>
+<TBODY>
+<TR th:each="p:${pageproduit.content}">
+<TD th:text="${p.idProduit}"></TD>
+<TD th:text="${p.designation}"></TD>
+<TD th:text="${p.prix}"></TD>
+</TR>
+</TBODY>
+</table>
+</DIV>
+<DIV class="container">
+<UL class="nav nav-pills">
+<LI th:each="p:${pages}" th:class="${pageCourant==p}?'active':''">
+<A th:href="@{chercher(page=${p},motcle=${motcle})}" th:text="${p}"></A>
+</LI>
+</UL>
+</DIV>
+</body>
+</html>

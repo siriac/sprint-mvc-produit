@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: sprint-mvc-produit
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Ulrich
+Implementation-Vendor-Id: org.sos
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/sprint-mvc-p
+ roduit/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
